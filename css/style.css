@@ -19,7 +19,7 @@ body{
     max-width: 1440px;
     min-width: 350px;
     margin: 0 auto;
-    padding: 15% 10px;
+    padding: 10% 10px;
     background: var(--very-light-gray);
     font-family: 'Lexend Deca', sans-serif;
     font-size: 15px; font-weight: 400;
@@ -58,7 +58,7 @@ main > section > button{
     padding: 20px;
     width: 70%;
     background-color: var(--very-light-gray);
-    border: none;
+    border: 2px solid var(--very-light-gray);
     border-radius: 30px;
     font-size: 1.1em;
 }
@@ -72,6 +72,10 @@ main section.sedans {
 main section.sedans button {
     color: var(--bright-orange);
 }
+main section.sedans button:hover {
+    background-color: inherit;
+    color: var(--transparent-white);
+}
 
 /* Section - SUVs */
 main section.suvs {
@@ -79,6 +83,10 @@ main section.suvs {
 }
 main section.suvs button {
     color: var(--dark-cyan);
+}
+main section.suvs button:hover {
+    background-color: inherit;
+    color: var(--transparent-white);
 }
 
 /* Section - Luxury */
@@ -90,7 +98,22 @@ main section.luxury {
 main section.luxury button {
     color: var(--very-dark-cyan);
 }
+main section.luxury button:hover {
+    background-color: inherit;
+    color: var(--transparent-white);
+}
 
+
+/* Footer */
+footer.attribution {
+    position: absolute;
+    bottom: 0px; left: 0px;
+    padding: 10px;
+    width: 100%;
+    font-size: 11px;
+    text-align: center;
+}
+footer.attribution a { color: hsl(228, 45%, 44%); }
 
 
 @media screen and (max-width: 920px) {
@@ -113,6 +136,7 @@ main section.luxury button {
 }
 
 @media screen and (max-width: 600px) {
+    h2 { font-size: 2em; }
     main{
         grid-template-columns: 1fr;
     }
@@ -124,6 +148,8 @@ main section.luxury button {
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
     }
+    main > section > p { margin-top: 20px; }
+    main > section > button { margin-top: 50px; }
     main section.luxury button {
         max-width: none;
     }
